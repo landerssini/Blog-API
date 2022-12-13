@@ -1,0 +1,9 @@
+#headertitle{
+    padding-left: 30px;
+}
+#postsDisplay{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 50px;
+    margin: 100px 70px 0 70px;
+}
