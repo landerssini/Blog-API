@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Blog API</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <nav class="navbar navbar-dark bg-primary">
-    <h1 id="headertitle" >Blog API</h1>
+    <h1 id="headertitle">Blog API</h1>
   </nav>
-<div id="postsDisplay">
-</div>
-<div class="modal fade" id="modal${post.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">${post.title}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div id="postsDisplay">
+  </div>
+  <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <p id="username"></p>
+        <p id="email"></p>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="commentBtn">
+            Comments <span class="badge bg-secondary" id="commentNum"></span>
+          </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <div class="dropdown">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Actions
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item list-group-item-action list-group-item-warning" href="#">Edit post</a></li>
+                <li><a class="dropdown-item list-group-item-action list-group-item-danger" href="#">Delete post</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-      ${post.body}
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <div class="dropdown">
-        <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item list-group-item-action list-group-item-warning" id="editpost${post.id}" href="#">Edit post</a></li>
-          <li><a class="dropdown-item list-group-item-action list-group-item-danger" id="deletepost${post.id}" href="#">Delete post</a></li>
-        </ul>
-      </div>
-</div>
-      </div>
+      <div class="modal-content" id="commentsDisplay" ></div>
     </div>
   </div>
-</div>
-<div id="loadMore"></div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <div id="loadMore"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

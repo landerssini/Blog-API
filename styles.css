@@ -7,3 +7,47 @@
     gap: 50px;
     margin: 100px 70px 0 70px;
 }
+.card-body{height: 170px;width: 300px;}
+#username,#email{
+    position: relative;
+    padding: 0 1rem 0 1rem;
+    margin:0 ;
+}
+#email{
+    margin:0 0 10px;
+}
+.btnModal{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    margin: 1rem;
+}
+.modal-dialog-centered{
+    flex-wrap: wrap;
+    align-content: center;
+}
+.commentBox {
+    margin-left: 20px;
+    margin-top: 14px;
+    margin-right: 35px;
+}
+
+.commentBody {
+    font-size: 15px;
+    margin: 0;
+}
+.commentTitle {
+    font-size: 20px;
+}
+#commentsDisplay{
+    max-height: 400px;
+    overflow: scroll;
+    transition: all 0.2s
+    
+}
+#commentBtn{
+    margin-right: auto;
+}
+.modal-content-hidden{
+    display:none;
+}
