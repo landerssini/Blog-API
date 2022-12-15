@@ -133,28 +133,6 @@ function deleteF(){
 
   .then(showModal)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function assignBtn() {
   buttonModal = document.querySelectorAll(".btnModal")
   buttonModal.forEach(btn => {
