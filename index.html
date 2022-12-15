@@ -22,7 +22,7 @@
           <h5 class="modal-title" id="modalTitle"></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" id="modalPost">
         </div>
         <p id="username"></p>
         <p id="email"></p>
@@ -30,7 +30,7 @@
           <button type="button" class="btn btn-primary" id="commentBtn">
             Comments <span class="badge bg-secondary" id="commentNum"></span>
           </button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelClose">Close</button>
           <div class="dropdown">
             <div class="dropdown">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
@@ -38,11 +38,13 @@
                 Actions
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item list-group-item-action list-group-item-warning" href="#">Edit post</a></li>
-                <li><a class="dropdown-item list-group-item-action list-group-item-danger" href="#">Delete post</a></li>
+                <li><a class="dropdown-item list-group-item-action list-group-item-warning"  id="editBtn">Edit post</a></li>
+                <li><a class="dropdown-item list-group-item-action list-group-item-danger" id="deleteBtn">Delete post</a></li>
               </ul>
             </div>
           </div>
+          <button type="button" class="btn btn-primary" id="saveChanges" style="display:none">Save changes</button>
+          <button type="button" class="btn btn-danger" id="deleteBtn2" style="display:none">DELETE</button>
         </div>
       </div>
       <div class="modal-content" id="commentsDisplay" ></div>
